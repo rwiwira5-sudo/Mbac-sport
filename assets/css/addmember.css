@@ -1,0 +1,188 @@
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+
+    body {
+      font-family: 'Kanit', sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: จ;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 1000px;
+      margin: 5rem;
+      margin-right: 5rem;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #2c5364;
+      border-left: 6px solid #2c5364;
+      padding-left: 10px;
+    }
+
+    /* layout หลัก */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 40px;
+      margin-bottom: 15px;
+    }
+
+    /* label + input อยู่ในกล่องเดียว */
+    .form-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .form-group label {
+      min-width: 130px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #2c5364;
+      box-shadow: 0 0 6px rgba(44, 83, 100, 0.3);
+      outline: none;
+    }
+
+    /* ปุ่ม */
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-save {
+      background: #2c5364;
+      color: #fff;
+    }
+
+    .btn-save:hover {
+      background: #203a43;
+    }
+
+    .btn-cancel {
+      background: #ccc;
+      color: #333;
+    }
+
+    .btn-cancel:hover {
+      background: #999;
+    }
+
+    /* ช่อง upload รูป */
+    .photo-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    /* สไตล์ใหม่สำหรับปุ่มอัปโหลดรูปภาพ */
+    .custom-file-upload {
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 8px;
+      background: #2c5364;
+      color: #fff;
+      transition: background 0.3s ease;
+      font-weight: normal;
+    }
+
+    .custom-file-upload:hover {
+      background: #203a43;
+    }
+
+    #file-upload {
+      display: none;
+    }
+
+    .photo-preview {
+      width: 120px;
+      height: 120px;
+      border: 1px dashed #aaa;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 0.9rem;
+      background: #fafafa;
+      overflow: hidden;
+    }
+
+    .photo-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Media Queries สำหรับ Responsive Design */
+    @media (max-width: 768px) {
+      .form-row {
+        gap: 10px 20px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .container {
+        padding: 20px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .form-group label {
+        min-width: auto;
+        margin-bottom: 5px;
+      }
+
+      .form-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .photo-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }

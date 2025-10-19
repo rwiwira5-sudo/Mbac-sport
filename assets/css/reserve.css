@@ -1,0 +1,151 @@
+/* ===== Styling สำหรับ reserve page main content ===== */
+/* ===== หัวข้อการยืม ===== */
+.reserve-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.reserve-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0e2bcf;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* เส้น underline แบบ gradient */
+/* .reserve-header h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #0e2bcf, #0e7490);
+} */
+
+/* ข้อความจำนวนคงเหลือ */
+.reserve-header p {
+  font-size: 1.1rem;
+  color: #374151;
+  background: #f9fafb;
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover effect ให้เด้งนิดๆ */
+.reserve-header p:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.reserve-container {
+  max-width: 700px;
+  margin: 10rem auto; /* เว้นระยะจากบน-ล่าง */
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  padding: 0 1rem; /* เผื่อไม่ให้ติดขอบจอ */
+}
+
+.reserve-container h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #065f46;
+  text-align: center; /* จัดหัวข้อให้อยู่ตรงกลาง */
+}
+
+.reserve-container p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #555;
+}
+
+.form-container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* เว้นระยะระหว่าง element ข้างใน */
+}
+
+/* label + input เป็น block เดียว */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.form-container input[type="number"],
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  outline: none;
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
+}
+
+/* ปุ่ม */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  background: linear-gradient(135deg, #176ad6, #0e2bcf);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  text-align: center;
+  transition: transform 0.15s ease, background 0.3s ease;
+  margin-top: 0.5rem;
+  align-self: center; /* ปุ่มอยู่ตรงกลางกล่อง */
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #22c55e, #047857);
+}
+
+/* success / error message */
+.success, .error {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.success {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}

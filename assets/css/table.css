@@ -1,0 +1,82 @@
+    /* Custom styles to enhance the Tailwind design */
+    :root {
+      --bg-color: #f4f6f9;
+      --card-bg: #fff;
+      --text-color: #333;
+      --text-muted: #666;
+      --border: #e0e0e0;
+      --primary: #2c5364;
+    }
+
+    .dark {
+      --bg-color: #1a202c;
+      --card-bg: #2d3748;
+      --text-color: #f7fafc;
+      --text-muted: #a0aec0;
+      --border: #4a5568;
+      --primary: #528b9c;
+    }
+
+    .styled-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 10px; /* เพิ่มระยะห่างระหว่างแถว */
+      color: var(--text-color);
+      font-size: 0.95rem;
+    }
+
+    .styled-table thead th {
+      background-color: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      padding: 15px 20px;
+      text-align: left;
+      border: none;
+    }
+    
+    .styled-table thead th:first-child {
+      border-top-left-radius: 10px;
+    }
+    
+    .styled-table thead th:last-child {
+      border-top-right-radius: 10px;
+    }
+
+    .styled-table tbody tr {
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: all 0.2s ease;
+    }
+    
+    .dark .styled-table tbody tr {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .styled-table tbody tr:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    .dark .styled-table tbody tr:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .styled-table tbody td {
+      padding: 15px 20px;
+      vertical-align: middle;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .styled-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .styled-table .photo-cell img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--primary);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }

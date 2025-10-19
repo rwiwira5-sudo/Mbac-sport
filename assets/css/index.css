@@ -1,0 +1,160 @@
+/* Main Content */
+.flex-1 {
+  background: #f9fafb;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* Banner ต้อนรับ */
+.welcome-banner {
+  background: linear-gradient(135deg, #176ad6, #0e2bcf);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.welcome-banner h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.welcome-banner p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* หัวข้อ */
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #111827;
+  font-weight: 600;
+}
+
+/* Grid แสดงอุปกรณ์ */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* การ์ดอุปกรณ์ */
+.equipment-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.equipment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  background: #0e2bcf;
+  color: #fff;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-body p {
+  margin: .3rem 0;
+}
+
+.quantity {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+.available {
+  color: #16a34a;
+}
+
+/* Footer ปุ่ม */
+.card-footer {
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+/* ปุ่ม */
+.btn, .btn-secondary, .btn-disabled {
+  display: inline-block;
+  padding: .6rem 1rem;
+  border-radius: .5rem;
+  font-size: .95rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+/* ปุ่มยืม */
+.btn {
+  background: #16a34a;
+  color: #fff;
+}
+
+.btn:hover {
+  background: #15803d;
+  transform: scale(1.05);
+}
+
+/* ปุ่มเข้าสู่ระบบ */
+.btn-secondary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: #1e40af;
+  transform: scale(1.05);
+}
+
+/* ปุ่ม disabled */
+.btn-disabled {
+  background: #9ca3af;
+  color: #fff;
+  cursor: not-allowed;
+}
+.status-pending {
+  display: inline-block;
+  background: #fbbf24; /* สีส้ม */
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-returned {
+  display: inline-block;
+  background: #22c55e; /* สีเขียว */
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.welcome-title {
+  color: white;
+}

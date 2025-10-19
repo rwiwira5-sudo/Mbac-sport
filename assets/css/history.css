@@ -1,0 +1,108 @@
+/* ====== Main Content Layout ====== */
+.main-content {
+  max-width: 1000px;
+  margin: 10px auto 0 auto; /* เหลือแค่ 10px ด้านบน */
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  padding-top: 0; /* ไม่เว้น padding ข้างในด้านบน */
+}
+
+
+
+.main-content .container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.main-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #065f46;
+}
+
+.main-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* ====== Table Styling ====== */
+.table-container {
+  overflow-x: auto;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table-container th, 
+.table-container td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.table-container thead {
+  background: #f9fafb;
+}
+
+.table-container th {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* hover effect */
+.table-container tbody tr:hover {
+  background: #f3f4f6;
+}
+
+/* ====== Status Styling ====== */
+.status {
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.status-approved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-pending {
+  background: #fef9c3;
+  color: #92400e;
+}
+
+.status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-returned {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* ====== Button ====== */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #176ad6, #0e2bcf);
+  color: #fff;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #22c55e, #047857);
+}

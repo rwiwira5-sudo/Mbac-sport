@@ -1,0 +1,213 @@
+        :root {
+            --primary-blue: #2563eb;
+            --dark-blue: #1e3a8a;
+            --deep-blue: #172554;
+            --light-blue-gradient: linear-gradient(to right, #60a5fa, #3b82f6);
+            --dark-blue-gradient: linear-gradient(to right, #1e40af, #1d4ed8);
+        }
+        
+        /* Recreating the original external CSS styles from the user's initial code */
+        /* addmember.css, show_use.css, add_all.css */
+        
+        .hr-sidebar {
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+
+        .hr-sidebar .gradient-bg {
+            background-image: linear-gradient(135deg, #1e3a8a, #1d4ed8);
+        }
+
+        .category-title {
+            color: #6b7280;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            transition-property: background-color, color;
+            transition-duration: 200ms;
+            color: #4b5563;
+        }
+
+        .menu-item:hover {
+            background-color: #dbeafe;
+            color: #2563eb;
+        }
+
+        .menu-item.active {
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .menu-item .icon-container {
+            flex-shrink: 0;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            background-color: #e5e7eb;
+            color: #2563eb;
+            transition-property: background-color, color;
+            transition-duration: 200ms;
+        }
+
+        .menu-item.active .icon-container {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        
+        /* Form styles from add_all.css */
+        .container {
+            max-width: 48rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1.5rem;
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .form-row {
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+
+        .form-group {
+            flex: 1 1 0%;
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #374151;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+        }
+
+        .photo-box {
+            margin-bottom: 1rem;
+        }
+
+        .custom-file-upload {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #2563eb;
+            color: #ffffff;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition-property: background-color;
+            transition-duration: 200ms;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #3b82f6;
+        }
+
+        .photo-preview {
+            width: 8rem;
+            height: 8rem;
+            margin-top: 0.5rem;
+            border: 2px dashed #d1d5db;
+            border-radius: 0.375rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            overflow: hidden;
+            /* Added for better responsiveness */
+            max-width: 100%; 
+            height: auto;
+        }
+
+        .photo-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .form-actions {
+            display: flex;
+            flex-wrap: wrap; /* Added for responsiveness on small screens */
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        /* Make buttons fluid on small screens */
+        .form-actions > button, .form-actions > a > button {
+            flex: 1 1 0%;
+            min-width: 150px; /* Ensure buttons don't get too small */
+        }
+
+
+        .btn-save, .btn-cancel {
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            transition-property: background-color;
+            transition-duration: 200ms;
+        }
+        
+        .btn-save {
+            margin-top: 2rem;
+            background-color: #1e40af; /* A darker blue */
+            color: #ffffff;
+        }
+
+        .btn-save:hover {
+            background-color: #1d4ed8; /* Slightly lighter on hover */
+        }
+        
+        .btn-cancel {
+            background-color: #e5e7eb;
+            color: #1f2937;
+        }
+
+        .btn-cancel:hover {
+            background-color: #d1d5db;
+        }
+        td{
+            margin: 2rem;
+        }

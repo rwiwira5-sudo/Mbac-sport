@@ -1,0 +1,86 @@
+
+/* === Sidebar Layout (non-destructive) === */
+:root { --sidebar-width: 260px; }
+
+#sidebar { width: var(--sidebar-width); z-index: 30; }
+
+#sidebarOverlay.hidden { display: none; }
+
+@media (min-width: 992px) {
+  body.has-sidebar #sidebar {
+    position: fixed;
+    left: 0; top: 0; height: 100vh;
+  }
+  body.has-sidebar main,
+  body.has-sidebar .main,
+  body.has-sidebar .content,
+  body.has-sidebar .content-wrap,
+  body.has-sidebar .page-content,
+  body.has-sidebar .container-page {
+    margin-left: var(--sidebar-width);
+  }
+}
+
+@media (max-width: 991px) {
+  #sidebar {
+    position: fixed;
+    left: 0; top: 0; height: 100vh;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  }
+  #sidebarToggle { display: inline-flex; }
+}
+
+
+/* === Full visible layout adjustment === */
+@media (min-width: 992px) {
+  body.has-sidebar #sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: var(--sidebar-width);
+    z-index: 30;
+  }
+  body.has-sidebar main,
+  body.has-sidebar .main,
+  body.has-sidebar .content,
+  body.has-sidebar .content-wrap,
+  body.has-sidebar .page-content,
+  body.has-sidebar .container-page {
+    margin-left: var(--sidebar-width) !important;
+    width: calc(100% - var(--sidebar-width)) !important;
+    display: block;
+    position: relative;
+  }
+}
+
+
+/* === Force content to be fully visible next to sidebar === */
+body.has-sidebar > *:not(#sidebar):not(#sidebarOverlay):not(#sidebarToggle) {
+  margin-left: var(--sidebar-width) !important;
+  width: calc(100% - var(--sidebar-width)) !important;
+  transition: margin-left 0.3s ease;
+}
+
+/* Smooth slide-in/out animation for sidebar */
+#sidebar {
+  transition: transform 0.3s ease, left 0.3s ease;
+}
+
+
+/* ✅ Fix for mobile: remove margin-left when sidebar is hidden */
+@media (max-width: 991px) {
+  body.has-sidebar > *:not(#sidebar):not(#sidebarOverlay):not(#sidebarToggle) {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  #sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  body.sidebar-open #sidebar {
+    transform: translateX(0);
+  }
+}

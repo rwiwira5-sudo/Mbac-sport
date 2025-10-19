@@ -1,0 +1,13 @@
+footer {
+    width: 100%;
+    background: linear-gradient(90deg, #280fb8, #1d68f3); /* เสีเดียวกับ header */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 3px solid #2746ae;
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+}
